@@ -73,6 +73,8 @@ class HtmlParser(object): #创建html解析类，实现对html的解析
         res_data['title'] = title_node.get_text()
         #<div class="lemma-summary" label-module="lemmaSummary">
         summary_node = soup.find('div', class_="lemma-summary")
+        if summary_node is None:
+            return
         res_data['summary'] = summary_node.get_text()
         return res_data
 
