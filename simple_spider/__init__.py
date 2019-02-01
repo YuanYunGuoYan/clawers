@@ -15,6 +15,8 @@ header = {  # 请求头部
     "Upgrade-Insecure-Requests": "1"}
 url_response = requests.get(url=tar_url, params=param, headers=header)
 
+print(url_response.text)
+
 img_header = {  # 请求头部
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:55.0) Gecko/20100101 Firefox/55.0",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
@@ -34,4 +36,4 @@ url_response = requests.get(url=img_url, headers=img_header)
 with open(img_name, "wb") as fw:
     fw.write(url_response.content)
 
-# print(url_response.status_code, url_response.text)
+print(img_url)
