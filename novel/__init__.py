@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8
 # author:wangqiyang
-import re
-import pymysql
-import csv
 import time
 import requests
 import multiprocessing
 import random
-import codecs
 from bs4 import BeautifulSoup
 
 # 假装不同的浏览器，这次暂时没有用上。
